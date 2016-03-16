@@ -42,9 +42,10 @@ new_list.add("link", "http://ruby-doc.org")
 # DISPLAY UNTITLED LIST
 # ---------------------
 new_list.all
-new_list.clear_list
-new_list.all
 
 # DEMO FILTER BY ITEM TYPE
 # ------------------------
-# new_list.filter("event")
+new_list.filter("event")
+
+new_list.clear_list
+new_list.all

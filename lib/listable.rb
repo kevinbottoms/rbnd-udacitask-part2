@@ -12,7 +12,6 @@ module Listable
   end
   def format_date(*args)
     dates = Chronic.parse(@due).strftime('%H:%M %d %b %Y') if @due
-    #dates = @due.class == Date ? @due.strftime("%D") : Chronic.parse('{@due}')
     dates = @start_date.strftime("%D") if @start_date
     dates << " -- " + @end_date.strftime("%D") if @end_date
     dates = "N/A" if !dates

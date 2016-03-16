@@ -32,8 +32,19 @@ class UdaciList
       puts @title
     end
     @items.each_with_index do |item, position|
-      rows << ["#{position + 1}", "#{item.details}"]
+      rows << ["#{position + 1}", "#{item.type}", "#{item.details}"]
       rows << :separator
+    end
+    table = Terminal::Table.new :rows => rows
+    puts table
+  end
+  def filter(type)
+    rows = []
+    @items.each_with_index do |item, position|
+      if item.type == type
+        rows << ["#{position + 1}", "#{item.type}", "#{item.details}"]
+        rows << :separator
+      end
     end
     table = Terminal::Table.new :rows => rows
     puts table
