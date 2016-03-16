@@ -18,16 +18,24 @@ class UdaciList
       "Item doesn't exist." if index > @items.length
     @items.delete_at(index - 1)
   end
+  def clear_list
+    counter = 0
+    while counter < self.items.length
+      self.items.delete_at(0)
+    end
+  end
   def all
+    rows = []
     if !@title
-      puts "-" * 18
+      puts ""
     else
-      puts "-" * @title.length
       puts @title
-      puts "-" * @title.length
     end
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      rows << ["#{position + 1}", "#{item.details}"]
+      rows << :separator
     end
+    table = Terminal::Table.new :rows => rows
+    puts table
   end
 end

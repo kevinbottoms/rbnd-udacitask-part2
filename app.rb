@@ -1,6 +1,7 @@
 require 'chronic'
 require 'colorize'
 # Find a third gem of your choice and add it to your project
+require 'terminal-table'
 require 'date'
 require_relative "lib/listable"
 require_relative "lib/errors"
@@ -40,6 +41,8 @@ new_list.add("link", "http://ruby-doc.org")
 
 # DISPLAY UNTITLED LIST
 # ---------------------
+new_list.all
+new_list.clear_list
 new_list.all
 
 # DEMO FILTER BY ITEM TYPE

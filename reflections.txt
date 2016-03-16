@@ -1,13 +1,27 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+     I used the terminal-table gem to output the lists in a cleaner
+     format.
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) Output the list in a table format.
+  b) Clear a list but keep it so a user can add more items.
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+    Longer than I thought I would. It took me about 5 hours.
 2. What was the most rewarding challenge you conquered?
+    Getting all of my values passed around between various methods and
+    modules to work correctly was challenging. For future projects I
+    plan on using some type of chart to keep myself better organized.
 3. What two additional features did you build? Why?
+    I imported the terminal-table gem and displayed the output in a
+    table to make it easier to read, and I also implemented a clear_list
+    method to delete all of the contents of a list but to keep the empty
+    list for re-use, for users that do all of their items before getting
+    a chance to update their list.
 4. Where do you still have room to grow?
+    Lot's of places. I think that keeping track of data as it flows from
+    one place to the next is something that I need to practice, as well
+    as thinking (and drawing) what I am trying to do before coding.
