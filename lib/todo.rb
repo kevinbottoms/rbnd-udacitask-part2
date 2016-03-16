@@ -4,7 +4,8 @@ class TodoItem
 
   def initialize(description, options={})
     @description = description
-    @due = options[:due].class == Date ? Date.parse(options[:due]) : options[:due]
+    #@due = (options[:due])
+    @due = options[:due].class == Date ? (options[:due]) : (options[:due])
     @priority = options[:priority]
   end
   def details
