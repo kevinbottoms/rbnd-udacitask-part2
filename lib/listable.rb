@@ -7,6 +7,7 @@ module Listable
     value = " ⇨" if @priority == "medium"
     value = " ⇩" if @priority == "low"
     value = "" if !@priority
+    raise UdaciListErrors::InvalidPriorityValue, "Priority Value Unsupported" if value != " ⇧" && value != " ⇨" && value != " ⇩" && value != ""
     return value
   end
   def format_date(*args)

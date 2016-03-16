@@ -10,8 +10,12 @@ class UdaciList
     @items.push TodoItem.new(description, options) if type == "todo"
     @items.push EventItem.new(description, options) if type == "event"
     @items.push LinkItem.new(description, options) if type == "link"
+    raise UdaciListErrors::InvalidItemType,
+      "This type of item is not supported." if type != "todo" && type != "event" && type != "link"
   end
   def delete(index)
+    raise UdaciListErrors::IndexExceedsListSize,
+      "Item doesn't exist." if index > @items.length
     @items.delete_at(index - 1)
   end
   def all
